@@ -54,3 +54,12 @@ func SortStringsByArray(src []string, sort []int) []string {
 
 	return sorted
 }
+
+// ReverseStrings reverses the slice and returns it
+func ReverseStrings(src []string) []string {
+	for i, j := 0, len(src)-1; i < j; i, j = i+1, j-1 {
+		src[i], src[j] = src[j], src[i]
+	}
+
+	return src
+}
